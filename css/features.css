@@ -1,0 +1,25 @@
+/* =====================================================================
+ * css/features.css : styles for js/features.js plus small fixes.
+ * Loaded after styles.css, uses the same design tokens (var(--...)).
+ * ===================================================================== */
+.hide-sm { display: none; }
+@media (min-width: 576px) { .hide-sm { display: inline; } }
+
+.promo { display: grid; gap: 14px; background: var(--pri); color: var(--on); border-radius: var(--r); padding: 24px; }
+.promo h2, .promo p { margin: 0 0 6px; }
+.promo form { display: flex; gap: 8px; align-items: center; }
+.promo input { background: var(--card); }
+@media (min-width: 768px) { .promo { grid-template-columns: 1fr 420px; align-items: center; } }
+
+.voices { display: grid; gap: 12px; }
+.voices figure { margin: 0; }
+.voices blockquote { margin: 0 0 8px; }
+@media (min-width: 768px) { .voices { grid-template-columns: repeat(3, 1fr); } }
+
+.ship { margin-bottom: 14px; }
+.ship .bar { height: 8px; border-radius: 99px; background: var(--bd); margin-top: 8px; overflow: hidden; }
+.ship .bar i { display: block; height: 100%; background: var(--ok); transition: width .4s; }
+
+.totop { position: fixed; right: 14px; bottom: calc(70px + env(safe-area-inset-bottom, 0px)); z-index: 85;
+  width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--bd); background: var(--card);
+  color: var(--ink); font-size: 18px; cursor: pointer; box-shadow: 0 4px 14px #0003; }

@@ -1,0 +1,10 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local test output
+__pycache__/
+*.pyc
+node_modules/
